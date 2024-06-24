@@ -1,0 +1,54 @@
+<!doctype html>  
+<html lang="en">  
+<head>  
+  <meta charset="utf-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  
+  <title>SEMICeu Repositories</title>  
+  <!-- Bootstrap CSS -->  
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">  
+  <!-- Custom CSS -->  
+  <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet">  
+</head>  
+<body>  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">  
+    <a class="navbar-brand" href="#">SEMICeu Repositories</a>  
+  </nav>  
+  
+  <div class="container mt-3">  
+    <div class="jumbotron text-center py-2">  
+      <h1 class="display-5">SEMICeu Repositories</h1>  
+      <p class="lead">Click on a repository to view its contents.</p>  
+    </div>  
+  </div>  
+  
+  <div class="container">  
+    <form method="POST" class="mb-3">  
+      <div class="input-group">  
+        <input type="text" name="search" class="form-control" placeholder="Search repositories" value="{{ search_query }}">  
+        <div class="input-group-append">  
+          <button class="btn btn-primary" type="submit">Search</button>  
+        </div>  
+      </div>  
+    </form>  
+  
+    <div class="row">  
+      {% for repo in repos %}  
+        <div class="col-sm-6 col-md-4 col-lg-3 mb-3">  
+          <div class="card h-100">  
+            <div class="card-body p-2">  
+              <h5 class="card-title">{{ repo }}</h5>  
+              <a href="https://github.com/SEMICeu/{{ repo }}" class="btn btn-primary btn-sm">View Repository</a>  
+            </div>  
+          </div>  
+        </div>  
+      {% endfor %}  
+    </div>  
+  </div>  
+  
+  <!-- Optional JavaScript -->  
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->  
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>  
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>  
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>  
+</body>  
+</html>  
