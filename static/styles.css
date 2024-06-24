@@ -1,0 +1,22 @@
+.jumbotron {  
+  padding: 1rem 2rem;  
+  background-color: #f8f9fa;  
+}  
+
+.card {  
+  border: none;  
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);  
+}  
+
+.card-title {  
+  font-size: 1rem;  
+  margin-bottom: 0.5rem;  
+}  
+
+.card-body {  
+  padding: 1rem;  
+}  
+
+.btn-sm {  
+  font-size: 0.875rem;  
+}  
